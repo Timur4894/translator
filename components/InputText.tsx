@@ -1,21 +1,28 @@
-import React from "react";
-import { View, StyleSheet, TextInput } from "react-native";
+import React, { useRef } from "react";
+import { View, StyleSheet, TextInput, TouchableWithoutFeedback, Keyboard } from "react-native";
+
 
 function InputText() {
-  const onChange = (): void => {
-    
+  const textInputRef = useRef<TextInput>(null); 
+
+  const dismissKeyboard = (): void => {
+    Keyboard.dismiss();  // ???
   };
 
+
+
   return (
-    <View style={styles.container}>
-      <TextInput
-        style={styles.input}
-        onChangeText={onChange}
-        placeholder="Write text to translate"
-        placeholderTextColor='#959595'
-        multiline={true}
-      />
-    </View>
+    <TouchableWithoutFeedback onPress={dismissKeyboard}>
+      <View style={styles.container}>
+        <TextInput
+          ref={textInputRef}
+          style={styles.input}
+          placeholder="Write text to translate"
+          placeholderTextColor='#959595'
+          multiline={true}
+        />
+      </View>
+    </TouchableWithoutFeedback>
   );
 }
 
@@ -36,7 +43,6 @@ const styles = StyleSheet.create({
     color: "#fff",
     fontSize: 22
   },
-
 });
 
 export default InputText;
