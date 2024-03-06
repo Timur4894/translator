@@ -6,7 +6,7 @@
 
 1. Клонируйте репозиторий на свой локальный компьютер:
 
-git clone 
+git clone  https://github.com/Timur4894/translator
 
 
 ## Запуск
