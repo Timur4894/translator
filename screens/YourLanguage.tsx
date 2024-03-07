@@ -1,19 +1,20 @@
-import { View, Text, SafeAreaView, StyleSheet} from "react-native"
+import { View, Text, SafeAreaView, StyleSheet, TextInput} from "react-native"
+import { Ionicons } from "@expo/vector-icons";
+import Search from "../components/UI/Search";
 
 
 function YourLanguage(){
     return(
         <View style={styles.container}>
-            <Text>
-                YourLanguage
-            </Text> 
+            <Search/>
         </View>
     )
 }
 
 const styles = StyleSheet.create({
     container: {
-      flex: 1
+      flex: 1,
+      backgroundColor: '#'
     },
 
   });

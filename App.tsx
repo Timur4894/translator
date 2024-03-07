@@ -19,10 +19,12 @@ export default function App() {
             <Stack.Screen name="YourLanguage" component={YourLanguage} options={{
                 presentation: 'modal',
                 headerShown: false,
+                cardStyle: { backgroundColor: '#323232' }
               }}/>
             <Stack.Screen name="OnLanguage" component={OnLanguage} options={{
                 presentation: 'modal',
                 headerShown: false,
+                cardStyle: { backgroundColor: '#323232' }
               }}/>
           </Stack.Navigator>
       </NavigationContainer>
